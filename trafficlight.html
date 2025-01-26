@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            /* margin: 0; */
+            padding: 0;
+        }
+        .traffice{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        #traffice-body{
+            /* margin: 0; */
+            height: 50vh;
+            width: 100px;
+
+            background-color: rgb(59, 47, 47);
+        }
+        #traffice-bar{
+            position: absolute;
+            height: 250px;
+            width: 20px;
+            background-color: black;
+            top: 300px;
+            left: 630px;
+        }
+        .light{
+            height: 70px;
+            width:70px;
+            /* background-color: black; */
+            border: 2px solid black;
+            border-radius: 50%; 
+            flex-direction: row;
+            margin: 12px;
+        }
+        @keyframes blinkred {
+            0%,
+            49%{
+                 background-color: red;
+            }
+
+            50%,
+            100%{
+                  background-color: black;
+            }
+        }
+
+        @keyframes blinkyellow {
+            0%,
+            49%{
+                 background-color:yellow;
+            }
+
+            50%,
+            100%{
+                  background-color: black;
+            }
+        }
+
+        @keyframes blinkgreen {
+            0%,
+            49%{
+                 background-color: green;
+            }
+
+            50%,
+            100%{
+                  background-color: black;
+            }
+        }
+        #red{
+            background-color: red;
+             animation: blinkred 10s infinite;
+        } 
+
+        #yellow{
+            background-color: yellow;
+            animation: blinkyellow 10s infinite;
+            animation-delay: 3s;
+        }
+
+        #green{
+            background-color: green;
+            animation: blinkgreen 10s infinite;
+            animation-delay: 6s;
+        }
+    </style>
+</head>
+<body>
+    <div class="traffice">
+        <div id="traffice-body">
+            <div id="red" class="light"></div>
+            <div id="yellow" class="light"></div>
+            <div id="green" class="light"></div>
+            <div id="traffice-bar"></div>
+        </div>
+    </div>
+</body>
+</html>

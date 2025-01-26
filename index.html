@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login form</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #from {
+        border: 2px solid black;
+        display: flex;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        background-image: url(p2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
+        margin: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <span id="from">
+      <form action="submit">
+        <h2>Registration Form</h2>
+        <hr />
+        <label for="Fname">FirstName: </label>
+        <input
+          type="text"
+          id="fname"
+          name="name"
+          placeholder="enter first name"
+          required
+        /><br />
+        <label for="lname">LastName: </label>
+        <input
+          type="text"
+          name="name"
+          id="lname"
+          placeholder="enter last name"
+          required
+        /><br />
+        <label for="btd">Birth Date: </label>
+        <input type="date" id="btd" name="date" required /><br />
+        <label for="geander">Geander: </label>
+        <input type="radio" name="geander" id="male" value="male" />male
+        <input type="radio" name="geander" id="female" value="female" />female
+        <input type="radio" name="geander" id="other" value="other" />other
+        <br />
+        <label for="hobbey">Hobbey: </label>
+        <input type="checkbox" name="hobbey" id="dance" />dance
+        <input type="checkbox" name="hobbey" id="cricket" />cricket
+        <input type="checkbox" name="hobbey" id="sining" />sining
+        <input type="checkbox" name="hobbey" id="other" />other
+        <br />
+        <label for="phone">Moblie Number: </label>
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          pattern="[0-9]{10}"
+          placeholder="enter moblie number"
+          required
+        /><br />
+        <label for="email">Email Address: </label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="enter your email Address"
+          required
+        />
+        <br />
+        <label for="pwd">Password: </label>
+        <input
+          type="password"
+          name="password"
+          id="pwd"
+          placeholder="enter your password"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,}"
+          required
+        />
+        <br />
+        <label for="city">City: </label>
+        <select id="city">
+          <option value="suart">suart</option>
+          <option value="rajkot">rajkot</option>
+          <option value="ahmdabad">ahmdabad</option>
+          <option value="amroil">amroil</option>
+          <option value="jungath">jungath</option>
+          <option value="jamnagar">jamnagar</option>
+          <option value="navsari">navsari</option>
+          <option value="bhavnagar">bhavnagar</option>
+          <option value="other">other</option>
+        </select>
+        <br />
+        <label for="add">Address: </label>
+        <textarea
+          name="Address"
+          id="add"
+          cols="20"
+          rows="4"
+          placeholder="enter Address"
+        ></textarea
+        ><br />
+        <input type="submit" />
+        <input type="reset" />
+      </form>
+    </span>
+  </body>
+</html>
